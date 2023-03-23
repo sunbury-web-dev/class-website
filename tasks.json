@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run tests",
+      "group": {
+          "kind": "test",
+          "isDefault": true
+      },
+      "type": "shell",
+      "command": "ruby -Ilib:test test/test_html_boilerplate.rb -p"
+    },
+    {
+      "label": "rack-server",
+      "group": {
+          "kind": "build",
+          "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "isBackground": true,
+      "type": "shell",
+      "command": "rackup",
+    }
+  ],
+}
